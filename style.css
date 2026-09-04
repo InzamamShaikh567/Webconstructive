@@ -980,7 +980,8 @@ body {
 .create-label--d,
 .create-bio-grid-bg--d,
 .create-bio-ellipse--d,
-.create-bio-grid-wrap--d {
+.create-bio-grid-wrap--d,
+.other-services-section {
   display: none;
 }
 
@@ -996,6 +997,64 @@ body {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+}
+
+/* Our Other Services — base (hidden on mobile, typography mirrors How/FAQ) */
+.other-services-heading {
+  font-family: "Faustina", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  color: #1a1a2e;
+  text-align: center;
+}
+
+.other-services-subheading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+  color: #1a1a2e;
+  text-align: left;
+}
+
+.other-services-para {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #3c3c3c;
+  text-align: left;
+}
+
+.other-services-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #c91b59;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 134.52%;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.other-services-img {
+  width: 300px;
+  height: 230px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -1458,6 +1517,59 @@ body {
     margin-top: 90px;
   }
 
+  .other-services-section {
+    display: block;
+    padding: 60px max(64px, calc((100vw - 1200px) / 2));
+    background-color: #ffffff;
+  }
+
+  .other-services-heading {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .other-services-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .other-services-content {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 85px;
+  }
+
+  .other-services-subheading {
+    font-size: 42px;
+  }
+
+  .other-services-para {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .other-services-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .other-services-img {
+    flex: 0 0 480px;
+    width: 480px;
+    height: 340px;
+    max-width: none;
+    border-radius: 16px;
+  }
+
   .footer {
     display: grid;
     grid-template-columns: 1.4fr 0.7fr 0.7fr;
@@ -1594,6 +1706,18 @@ body {
 
   .create-bio-heading {
     font-size: 44px;
+  }
+
+  .other-services-section {
+    padding: 80px max(80px, calc((100vw - 1200px) / 2));
+    gap: 64px;
+  }
+
+  .other-services-img {
+    flex: 0 0 520px;
+    width: 520px;
+    height: 380px;
+    scale: 0.87;
   }
 
   .footer {
